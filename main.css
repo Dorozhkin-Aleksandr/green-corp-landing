@@ -167,6 +167,150 @@ footer h3 {
 .footer__links a {
     margin-bottom: 15px;
 }
+.features {
+    background-color: white;
+    padding: 115px 60px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+.card {
+    padding: 35px 40px 25px 40px;
+    background: #FFFFFF;
+    border:solid #D9E4E6;
+    border-width: 1px;
+    border-radius: 5px;    
+}
+.card p {
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.8;
+}
+.card__logo {
+    height: 100px;
+    width:  100px;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: #eaeff9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.card__logo.first {   /* ход конём нашел на MDN нацеливание классов на отдельные элементы */
+    color: #ffb406;
+}
+.card__logo.second {
+    color: #ad1714;
+}
+.card__logo.third {
+    color: #22a030;
+}
+.features__border {
+    margin: 50px 0px;
+    border: solid #E6EAF4;
+    border-width: 1px;
+    width: 100%;
+}
+.features__feedback {
+    display: flex;
+    /*Нужно расположить левую и правую часть на одной линии*/
+    align-items: center; /*этот параметр нужно протестировать на FULHD*/
+}
+.features__feedback-left {
+    margin-right: 10px;
+}
+.features__feedback-left h2 {
+    font-size: 48px;
+}
+.features__feedback-left p {
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+}
+.features__feedback-right { /*В правой части находятся две цветные карточки, они расположены в одну строчку и отцентрованы по вертикали. */
+    display: flex;
+    /*align-items:space-evenly; моя версия*/
+    align-items: space-evenly;
+}
+.features__box {
+    padding: 30px 40px 25px 40px;
+    color: white;
+    border-radius: 25px;
+}
+.features__box h3 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+.features__savings-box {
+    background-color: #dc5e26;
+    box-shadow: 0px 6px 0px rgb(221 95 38 / 20%);
+    margin-right: 30px;
+}
+.features__rate-box {
+    background-color: #1D263A;
+    box-shadow: 0px 6px 0px rgb(29 38 58 / 20%);
+}
+.stars {
+    color: #ff7039;
+}
+.promo__image {
+    background-image: url(img/promo.jpg);
+    width: 50%; /*пока этот параметр не установил, картинка не отображалась*/
+    background-position: center;
+    background-size: cover;
+    flex-shrink: 0;
+}
+.promo {
+    display: flex;
+    /*justify-content: space-evenly;
+    align-items: flex-start;*/
+}
+.promo__right {
+    background-color: #dd5f26;
+    padding: 160px 60px;
+}
+.promo__text {
+    background-color: white;
+    padding: 30px 40px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    border-radius: 25px;
+}
+.promo__text p {
+    opacity: 80%;
+}
+.promo__text p::before {  /*оранжевые точки перед абзацем*/
+    content: '';
+    display: inline-block; 
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ec6b29;
+    margin-right: 10px;
+  }
+.promo__text button {
+    background-color: #107b1c;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 15px 30px;
+    line-height: 18px;
+    font-weight: 600;
+    box-shadow: 0 16px 36px rgb(16 122 28 / 30%);
+}
+.promo__text button i {
+    font-size: 15px;
+    margin-left: 5px;
+}
+.promo__button-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
 @keyframes rotation {
     0%{
         transform: rotate(0);
@@ -227,5 +371,41 @@ footer h3 {
     }
     .footer__container {
         flex-direction: column;
-    }   
+    }
+    .features {
+        padding: 50px 10px;
+    }
+    .cards {
+        grid-template-columns: auto;
+    }
+    .features__feedback {
+        flex-direction: column;
+    }
+    .features__feedback-left {
+        margin-right: 0px;
+    }
+    .features__feedback-left h2 {
+        font-size: 36px;
+    }
+    .features__feedback-right {
+        flex-direction: column;
+        align-items: initial; /* этот параметр добавил после проверки задания*/
+    }
+    .features__box h3 {
+        font-size: 36px;
+    }
+    .features__savings-box {
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+    .promo {
+        flex-direction: column-reverse;
+    }
+    .promo__right {
+        padding: 50px 10px;
+    }
+    .promo__image {
+        width: 100%; /*в мобильной версии картинка должна растягиваться по всей ширине и иметь высоту 500px*/
+        height: 500px;
+    }
 }
