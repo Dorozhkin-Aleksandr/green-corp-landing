@@ -15,7 +15,7 @@
   <header>
     <img class="header__logo" src='img/logo.svg'>
     <div class="header__controls">
-      <a href='#contacts'>Контакты</a>
+      <a href='#form'>Контакты</a>
       <button type="button">Заказать</button>
     </div>
   </header>
@@ -25,7 +25,7 @@
     <div class="about__info animate__animated animate__slideInLeft animate__slow animate__repeat-1">
       <h1>Солнечные панели GreenRobotic</h1>
       <p>Производите дешёвую экологически чистую электроэнергию из солнечного света</p>
-      <button>Узнать подробнее <i class="fas fa-angle-right"></i></button>
+      <button class="more-button" href="#features">Узнать подробнее <i class="fas fa-angle-right"></i></button>
     </div>
     
     <div class="about__images animate__animated animate__slideInRight animate__slow animate__repeat-1">
@@ -35,7 +35,7 @@
     </div>
   </section>
   
-  <section class="features">
+  <section class="features" id="features">
     <div class="cards">
       <div class="card" >        
         <div class="card__logo first">
@@ -74,7 +74,7 @@
     <div class="features__feedback-left">
       <h2>Нам доверяет 
         <br>
-        5000+ счастливых клиентов</h2>
+        <div class="features__clients-count">5000+</div> счастливых клиентов</h2>
       <p>Мы помогли тысячам людей перейти на зеленую энергию.
         <br>
         После заказа мы позаботимся обо всем: доставка панелей, проект, установка, помощь в использовании</p>
@@ -117,7 +117,7 @@
 
   </section>
 
-  <section class="form"> <!--начало секции "оставьте свои контакты"-->
+  <section class="form" id="form"> <!--начало секции "оставьте свои контакты"-->
     <div class="form__container">
       <h1>Оставьте свои контакты</h1>
       <p>Поможем подобрать модель.
@@ -144,7 +144,7 @@
             <option value="10-30">10 000₽ – 30 000₽</option>
             <option value="30-60">30 000₽ – 60 000₽</option>
             <option value="60-100">60 000₽ – 100 000₽</option>
-            <option value="100+">100 000₽</option>  
+            <option value="other">Другое</option>  
           </select>
         </div>
         <button class="form__submit" type="submit">Отправить заявку</button>
@@ -185,6 +185,7 @@
   </footer>
 
   <script src='js/canvas.js'></script> <!--подключаем файл с JS, этот тег должен быть самым последним в body-->
+  <script src='js/animations.js'></script> <!--файл скрипта с анимацией-->>
   
 </body>
 </html>
